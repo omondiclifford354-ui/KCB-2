@@ -1,0 +1,169 @@
+/* ===========================
+   KCB Website - main.css
+   =========================== */
+
+/* Root color variables */
+:root {
+  --primary-color: #006400;   /* KCB Green */
+  --secondary-color: #FFD700; /* KCB Yellow */
+  --neutral-dark: #000000;    /* Black */
+  --neutral-light: #ffffff;   /* White */
+  --accent-gray: #f4f4f4;     /* Light gray background */
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--accent-gray);
+  color: var(--neutral-dark);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--neutral-light);
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+header .logo img {
+  height: 60px;
+  width: auto;
+  margin-right: 20px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--secondary-color);
+}
+
+/* Navigation */
+nav {
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--neutral-dark);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  text-align: center;
+  color: var(--neutral-light);
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 100, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.banner .caption h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.banner .caption p {
+  font-size: 1.2rem;
+}
+
+/* Main content */
+main {
+  padding: 30px;
+  background-color: var(--neutral-light);
+}
+
+main h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+main p {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--neutral-light);
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer i {
+  margin: 0 8px;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+footer i:hover {
+  color: var(--neutral-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .banner .caption {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
